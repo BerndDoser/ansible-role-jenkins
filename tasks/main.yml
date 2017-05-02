@@ -56,5 +56,8 @@
     path: "{{ jenkins_home }}/init.groovy.d/basic-security.groovy"
     state: absent
 
+# Configure Jenkins
+- include: config.yml
+
 # Update Jenkins and install configured plugins.
 - include: plugins.yml

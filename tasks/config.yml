@@ -3,3 +3,4 @@
   template:
     src: config.xml
     dest: "{{ jenkins_home }}/config.xml"
+  notify: restart jenkins
