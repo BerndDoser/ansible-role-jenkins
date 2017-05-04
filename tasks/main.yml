@@ -58,6 +58,12 @@
 
 # Configure Jenkins
 - include: config.yml
+- name: Open port 8080 if firewalld is used
+  firewalld:
+    port: 8080/tcp
+    permanent: true
+    immediate: yes
+    state: enabled
 
 # Update Jenkins and install configured plugins.
 - include: plugins.yml
