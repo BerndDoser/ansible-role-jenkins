@@ -25,3 +25,9 @@ jenkins_init_changes:
     value: "{{ jenkins_java_options }}"
 
 jenkins_number_of_master_executors: 2
+jenkins_use_active_directory_security_realm: false
+jenkins_active_directory_domain_name:
+jenkins_active_directory_domain_server:
+jenkins_active_directory_site:
+jenkins_active_directory_bind_dn:
+jenkins_active_directory_bind_password:
