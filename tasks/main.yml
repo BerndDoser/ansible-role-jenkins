@@ -56,8 +56,6 @@
     path: "{{ jenkins_home }}/init.groovy.d/basic-security.groovy"
     state: absent
 
-# Configure Jenkins
-- include: config.yml
 - name: Open port 8080 if firewalld is used
   firewalld:
     port: 8080/tcp
@@ -67,3 +65,6 @@
 
 # Update Jenkins and install configured plugins.
 - include: plugins.yml
+
+# Configure Jenkins
+- include: config.yml
